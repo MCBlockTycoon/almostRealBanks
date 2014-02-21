@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="457" localization="OSGI-INF/l10n/bundle" name="RealBanksModors" project="RealBanksModors">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="454" localization="OSGI-INF/l10n/bundle" name="RealBanksRepack" project="RealBanksRepack">
+		<library name="."/>
+	</bundle>
+</map>

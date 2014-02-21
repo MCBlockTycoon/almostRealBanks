@@ -1,0 +1,134 @@
+name: UnFuckedRealBanks
+main: org.rominos2.RealBanks.RealBanks
+version: 1.5.4
+RealBanksAPIversion: 2
+author: rominos2
+softdepend: [Vault]
+commands:
+    realbanks:
+        description: The How-to-Use for all /realbanks command
+        usage: /<command>
+        aliases: [rb]
+
+permissions:
+    realbanks.*:
+        default: op
+        description: Allow everything on RealBanks commands
+        children:
+            realbanks.create: true
+            realbanks.delete: true
+            realbanks.connect: true
+            realbanks.subscribe.*: true
+            realbanks.unsubscribe.*: true
+            realbanks.modify: true
+            realbanks.list.*: true
+            realbanks.edit: true
+            realbanks.as: true
+            realbanks.get: true
+            realbanks.send: true
+            realbanks.reload: true
+            realbanks.bank.*: true
+            realbanks.eco.*: true
+            realbanks.link: true
+            realbanks.unlink: true
+    realbanks.create:
+        default: op
+        description: Allow /realbanks create
+    realbanks.delete:
+        default: op
+        description: Allow /realbanks delete
+    realbanks.connect:
+        default: op
+        description: Allow /realbanks connect & /realbanks disconnect
+    realbanks.subscribe.*:
+        default: op
+        description: Allow everything on /realbanks subscribe
+        children:
+            realbanks.subscribe.self: true
+            realbanks.subscribe.other: true
+    realbanks.subscribe.self:
+        default: op
+        description: Allow /realbanks subscribe
+    realbanks.subscribe.other:
+        default: op
+        description: Allow /realbanks subscribe on other players
+    realbanks.unsubscribe.*:
+        default: op
+        description: Allow everything on /realbanks unsubscribe
+        children:
+            realbanks.unsubscribe.self: true
+            realbanks.unsubscribe.other: true
+    realbanks.unsubscribe.self:
+        default: op
+        description: Allow /realbanks unsubscribe
+    realbanks.unsubscribe.other:
+        default: op
+        description: Allow /realbanks unsubscribe on other players
+    realbanks.modify:
+        default: op
+        description: Allow /realbanks modify
+    realbanks.list.*:
+        default: op
+        description: Allow everything on /realbanks list
+        children:
+            realbanks.list.banks: true
+            realbanks.list.clients: true
+    realbanks.list.banks:
+        default: op
+        description: Allow /realbanks list
+    realbanks.list.clients:
+        default: op
+        description: Allow /realbanks list [bank]
+    realbanks.edit:
+        default: op
+        description: Allow /realbanks edit
+    realbanks.as:
+        default: op
+        description: Allow /realbanks as
+    realbanks.get:
+        default: op
+        description: Allow /realbanks get
+    realbanks.send:
+        default: op
+        description: Allow /realbanks send
+    realbanks.reload:
+        default: op
+        description: Allow /realbank reload
+    realbanks.link:
+        default: op
+        descrpition: Allow /rb link
+    realbanks.unlink:
+        default: op
+        description: Allow /rb unlink
+    realbanks.bank.*:
+        default: op
+        description: Allow Command on bank (realbanks.bank.<Bank Name>)
+    realbanks.eco.*:
+        default: op
+        description: Allow everything about bank for free (Economy)
+        children:
+            realbanks.eco.subscribe.*: true
+            realbanks.eco.create: true
+            realbanks.eco.connect: true
+            realbanks.eco.link: true
+    realbanks.eco.subscribe.*:
+        default: op
+        descirption: Allow subscribing self and other for free
+        children:
+            realbanks.eco.subscribe.self: true
+            realbanks.eco.subscribe.other: true
+    realbanks.eco.subscribe.self:
+        default: op
+        description: Allow subscribing self for free
+    realbanks.eco.subscribe.other:
+        default: op
+        description: Allow subscribing other for free
+    realbanks.eco.create:
+        default: op
+        description: Allow creating banks for free
+    realbanks.eco.connect:
+        default: op
+        description: Allow connecting chests for free
+    realbanks.eco.link:
+        default: op
+        description: Allow linking banks for free

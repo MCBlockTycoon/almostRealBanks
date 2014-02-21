@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="UnFuckedRealBanks"/>
+	<classpathentry kind="lib" path="C:/Users/450/Downloads/bukkit-1.7.2-R0.4-20140216.011848-2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/450/Downloads/Vault.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
